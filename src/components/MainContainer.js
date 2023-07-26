@@ -12,7 +12,7 @@ export default function MainContainer() {
           textAlign: 'center',
           padding: '5px',
           margin: '5px',
-          boxShadow: '8px 8px 3px lightgrey',
+          boxShadow: '2px 2px 6px lightgrey',
           maxWidth: '80vw',
         }}
       >

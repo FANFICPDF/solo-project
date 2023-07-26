@@ -12,7 +12,7 @@ export default function ListItem() {
             textAlign: 'center',
             padding: '5px',
             margin: '5px',
-            boxShadow: '8px 8px 3px lightgrey',
+            boxShadow: '2px 2px 6px lightgrey',
           }}
         >
           THUMBNAIL …Title... ....Notes...
@@ -21,7 +21,9 @@ export default function ListItem() {
           </span>
           {expanded ? (
             <div className="expandable">
-              …contents of the expanded div Xdelete
+              <img src="/" />
+              …contents of the expanded div
+              <button>Delete</button>
             </div>
           ) : null}
         </div>
