@@ -12,11 +12,15 @@ export default function MainContainer() {
           textAlign: 'center',
           padding: '5px',
           margin: '5px',
-          boxShadow: '2px 2px 6px lightgrey',
-          maxWidth: '80vw',
+          // boxShadow: '2px 2px 6px lightgrey',
+          // maxWidth: '80vw',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
         }}
       >
-        <h2>The Main Container</h2>
+        <h2>The MET Image Notes APP</h2>
         <MainImage />
         <ul
           style={{ listStyleType: 'none', textAlign: 'center', padding: '5px' }}

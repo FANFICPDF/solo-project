@@ -5,7 +5,14 @@ import MainContainer from './components/MainContainer';
 const App = () => {
   return (
     <>
-      <MainContainer />
+      <MainContainer
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      />
     </>
   );
 };

@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ListItem from './ListItem';
 
 export default function ListContainer() {
   // TODO pull documents from MongoDB server into an array and map list items.
+  // useEffect(() => {
+  //   const pingBackend = () => {
+  //     fetch('/api/notes', {
+  //       method: 'GET',
+  //     })
+  //       .then((response) =>
+  //         response.text().then(function (text) {
+  //           setPingResponse(text);
+  //         })
+  //       )
+  //       .catch((err) => console.log(err));
+  //   };
+  // }, []);
   return (
     <>
       <ListItem />
