@@ -60,4 +60,23 @@ noteController.addNote = (req, res, next) => {
     );
 };
 
+noteController.deleteNote = (req, res, next) => {
+  console.log('req Body: ', req.body);
+  const id = req.body._id;
+  Note.findOneAndDelete({ _id: id })
+    .then((deletedNote) => {
+      res.locals.deletedNote = deletedNote;
+      console.log('deletedNote', deletedNote);
+      return next();
+    })
+    .catch((err) =>
+      next({
+        log: 'Express error caught in noteController.deleteNote middleware',
+        message: {
+          err: `An error occurred in noteController.deleteNote middleware: ${err}`,
+        },
+      })
+    );
+};
+
 module.exports = noteController;

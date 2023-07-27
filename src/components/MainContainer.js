@@ -22,11 +22,6 @@ export default function MainContainer() {
       >
         <h2>The MET Image Notes APP</h2>
         <MainImage />
-        <ul
-          style={{ listStyleType: 'none', textAlign: 'center', padding: '5px' }}
-        >
-          <ListContainer />
-        </ul>
       </div>
     </>
   );

@@ -13,4 +13,8 @@ router.post('/notes', noteController.addNote, (req, res) =>
   res.status(200).json(res.locals.newNote)
 );
 
+router.delete('/notes', noteController.deleteNote, (req, res) =>
+  res.status(200).json(res.locals.deletedNote)
+);
+
 module.exports = router;

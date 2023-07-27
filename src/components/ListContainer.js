@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import ListItem from './ListItem';
 
-export default function ListContainer() {
+export default function ListContainer(props) {
   // TODO pull documents from MongoDB server into an array and map list items.
   // useEffect(() => {
   //   const pingBackend = () => {
@@ -16,10 +16,19 @@ export default function ListContainer() {
   //       .catch((err) => console.log(err));
   //   };
   // }, []);
-  return (
-    <>
-      <ListItem />
-      <ListItem />
-    </>
-  );
+  // console.log('props: ', props.props);
+  const listArr = [];
+
+  props.props.forEach((el, index) => {
+    listArr.push(
+      <ListItem
+        props={el}
+        currObj={props.currObj}
+        setCurrObj={props.setCurrObj}
+        key={el._id}
+      />
+    );
+  });
+
+  return <>{listArr}</>;
 }
